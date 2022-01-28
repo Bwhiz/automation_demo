@@ -69,7 +69,7 @@ def get_opening_balance(file_name):
 form = st.form(key='my_form')
 
 uploaded_file = st.file_uploader(label=" Please upload your file: ")
-if uploaded_file is not none:
+if uploaded_file is not None:
     review = uploaded_file
     beginn = get_opening_balance(review)
 
