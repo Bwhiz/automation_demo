@@ -68,10 +68,12 @@ def get_opening_balance(file_name):
 
 form = st.form(key='my_form')
 
-review = form.text_input(label='Please input the data name or data path:')
-submit = form.form_submit_button(label='click here to get result')
+uploaded_file = st.file_uploader(label=" Please upload your file: ")
+if uploaded_file is not none:
+    review = uploaded_file
+    beginn = get_opening_balance(review)
 
-beginn = get_opening_balance(review)
+submit = form.form_submit_button(label='click here to get result')
 
 if submit:
     data = clean_data(review)
